@@ -8,3 +8,4 @@ RUN npx degit Bre77/splunk-dev /opt/splunk/etc/apps/000_dev && npx degit ChrisYo
 VOLUME [ "/opt/splunk/etc", "/opt/splunk/var" ]
 ENV SPLUNK_HOME=/opt/splunk
 #RUN /opt/splunk/bin/splunk start --accept-license --answer-yes --no-prompt --seed-passwd devcontainer && /opt/splunk/bin/splunk stop
+LABEL name=suidev
