@@ -1,18 +1,19 @@
 {
-  "build": { "dockerfile": "dockerfile" },
-  "postCreateCommand": "./.devcontainer/setup.sh",
-  "postStartCommand": "./.devcontainer/start.sh",
-"forwardPorts": [
-	8000
-],
-"customizations": {
-	"vscode": {
-		"extensions": [
-			"esbenp.prettier-vscode",
-			"Splunk.splunk",
-			"GitHub.copilot",
-			"mutantdino.resourcemonitor"
-		]
+	"image": "ghcr.io/bre77/splunkui-devcontainer:main",
+	"build": { "dockerfile": "dockerfile" },
+	"postCreateCommand": "./.devcontainer/setup.sh",
+	"postStartCommand": "./.devcontainer/start.sh",
+	"forwardPorts": [
+		8000
+	],
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"esbenp.prettier-vscode",
+				"Splunk.splunk",
+				"GitHub.copilot",
+				"mutantdino.resourcemonitor"
+			]
+		}
 	}
-}
 }
