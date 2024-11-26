@@ -1,5 +1,5 @@
 FROM docker.io/splunk/splunk as splunk
-FROM mcr.microsoft.com/devcontainers/javascript-node:14
+FROM mcr.microsoft.com/devcontainers/javascript-node
 USER node
 COPY --from=splunk --chown=node /opt/splunk /opt/splunk
 COPY --from=splunk --chown=node /opt/splunk-etc /opt/splunk/etc
